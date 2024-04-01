@@ -286,8 +286,7 @@
                         <li><a href="vendor.html">vendor</a></li>
                         <li><a href="blog.html">blog</a></li>
                         <li><a href="daily_deals.html">campain</a></li>
-                        <li class="wsus__relative_li"><a href="#">pages <i
-                                    class="fas fa-caret-down"></i></a>
+                        <li class="wsus__relative_li"><a href="#">pages <i class="fas fa-caret-down"></i></a>
                             <ul class="wsus__menu_droapdown">
                                 <li><a href="404.html">404</a></li>
                                 <li><a href="faqs.html">faq</a></li>
@@ -310,7 +309,7 @@
                     <ul class="wsus__menu_item wsus__menu_item_right">
                         <li><a href="contact.html">contact</a></li>
                         <li><a href="dsahboard.html">my account</a></li>
-                        <li><a href="login.html">login</a></li>
+                        <li><a href="{{ route('login') }}">login</a></li>
                     </ul>
                 </div>
             </div>
@@ -340,14 +339,12 @@
 
     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-home" role="tab" aria-controls="pills-home"
-                aria-selected="true">Categories</button>
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                role="tab" aria-controls="pills-home" aria-selected="true">Categories</button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
-                data-bs-target="#pills-profile" role="tab" aria-controls="pills-profile"
-                aria-selected="false">main menu</button>
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                role="tab" aria-controls="pills-profile" aria-selected="false">main menu</button>
         </li>
     </ul>
     <div class="tab-content" id="pills-tabContent">
