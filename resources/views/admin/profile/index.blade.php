@@ -57,6 +57,55 @@
                         </form>
                     </div>
                 </div>
+
+
+                <div class="col-12 col-md-12 col-lg-7">
+                    <div class="card">
+                        <form method="post" action="{{ route('admin.password.update') }}" enctype="multipart/form-data"
+                            class="needs-validation" novalidate="">
+                            @csrf
+                            <div class="card-header">
+                                <h4>Update Password</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="form-group col-md-6 col-12">
+                                        <label>Current Password</label>
+                                        <input type="password" class="form-control" name="current_password" required="">
+                                        <div class="invalid-feedback">
+                                            Please fill in the current password
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-md-6 col-12">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" name="password" required="">
+                                        <div class="invalid-feedback">
+                                            Please fill in the password
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-md-6 col-12">
+                                        <label>Confirm Password</label>
+                                        <input type="password" class="form-control" name="password_confirmation"
+                                            required="">
+                                        <div class="invalid-feedback">
+                                            Please fill in the password confirmation
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="card-footer text-right">
+                                <button class="btn btn-primary">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
