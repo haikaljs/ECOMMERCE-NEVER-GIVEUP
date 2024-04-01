@@ -72,15 +72,15 @@
 
                                     <div class="form-group col-md-6 col-12">
                                         <label>Current Password</label>
-                                        <input type="password" class="form-control" name="current_password" required="">
+                                        <input type="password" class="form-control" name="current_password" required>
                                         <div class="invalid-feedback">
                                             Please fill in the current password
                                         </div>
                                     </div>
 
                                     <div class="form-group col-md-6 col-12">
-                                        <label>Password</label>
-                                        <input type="password" class="form-control" name="password" required="">
+                                        <label>New Password</label>
+                                        <input type="password" class="form-control" name="password" required>
                                         <div class="invalid-feedback">
                                             Please fill in the password
                                         </div>
@@ -88,8 +88,7 @@
 
                                     <div class="form-group col-md-6 col-12">
                                         <label>Confirm Password</label>
-                                        <input type="password" class="form-control" name="password_confirmation"
-                                            required="">
+                                        <input type="password" class="form-control" name="password_confirmation" required>
                                         <div class="invalid-feedback">
                                             Please fill in the password confirmation
                                         </div>

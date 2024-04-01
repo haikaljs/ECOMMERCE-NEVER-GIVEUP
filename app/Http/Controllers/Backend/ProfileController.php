@@ -45,7 +45,7 @@ class ProfileController extends Controller
     /** @var \App\Models\User $user **/
        $user->save();
 
-
+       toastr()->success('Profile Updated Successfully!');
         return redirect()->back();
 
     }
@@ -54,7 +54,7 @@ class ProfileController extends Controller
     public function updatePassword(Request $request){
         $request->validate([
             'current_password' => ['required','current_password'],
-            'password' => ['required', 'confirmed', 'min:8']
+            'password' => ['required', 'confirmed', 'min:8'],
 
         ]);
 
@@ -62,6 +62,7 @@ class ProfileController extends Controller
             'password' => bcrypt($request->password)
         ]);
 
+        toastr()->success('Password Updated Successfully!');
         return redirect()->back();
     }
 }
