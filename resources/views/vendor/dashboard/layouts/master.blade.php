@@ -24,6 +24,8 @@
 
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
+    {{-- toastr css --}}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <!-- <link rel="stylesheet" href="css/rtl.css"> -->
 </head>
 
@@ -33,7 +35,7 @@
     <!--=============================
     DASHBOARD MENU START
   ==============================-->
-    @include('frontend.dashboard.layouts.menu')
+    @include('vendor.dashboard.layouts.menu')
     <!--=============================
     DASHBOARD MENU END
   ==============================-->
@@ -44,7 +46,7 @@
   ==============================-->
     <section id="wsus__dashboard">
         <div class="container-fluid">
-            @include('frontend.dashboard.layouts.sidebar')
+            @include('vendor.dashboard.layouts.sidebar')
             @yield('content')
         </div>
     </section>
@@ -100,9 +102,19 @@
     <script src="{{ asset('frontend/assets/js/venobox.min.js') }}"></script>
     <!--classycountdown js-->
     <script src="{{ asset('frontend/assets/js/jquery.classycountdown.js') }}"></script>
+    {{-- toastrjs --}}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     <!--main/custom js-->
     <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+    <script>
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                toastr.error("{{ $error }}")
+            @endforeach
+        @endif
+    </script>
+
 </body>
 
 </html>
