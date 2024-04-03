@@ -58,7 +58,7 @@ class SliderController extends Controller
 
        $slider->save();
        toastr("Created successfully");
-       return redirect()->back();
+       return redirect()->route('admin.slider.index');
     }
 
     /**
@@ -115,6 +115,15 @@ class SliderController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $slider = Slider::findOrFail($id);
+        if(empty(!$slider->banner)){
+            $this->deleteImage($slider->banner);
+        }
+
+        $slider->delete();
+
+        return response([
+            'status' => 'success', 'message' => 'Deleted successfully!'
+        ]);
     }
 }
