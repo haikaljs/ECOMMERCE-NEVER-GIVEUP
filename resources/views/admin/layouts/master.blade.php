@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/modules/weather-icon/css/weather-icons-wind.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/assets/modules/summernote/summernote-bs4.css') }}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    {{-- yajra table css --}}
+    <link rel="stylesheet" href="//cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css">
+    {{-- Yajra table css bootstrap5 --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css">
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
@@ -67,6 +71,10 @@
     <script src="{{ asset('backend/assets/modules/summernote/summernote-bs4.js') }}"></script>
     <script src="{{ asset('backend/assets/modules/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    {{-- yajra table --}}
+    <script src="//cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+    {{-- yajra table bootstrap5 --}}
+    <script src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
 
     <!-- Page Specific JS File -->
     <script src="{{ asset('backend/assets/js/page/index-0.js') }}"></script>
@@ -81,6 +89,8 @@
             @endforeach
         @endif
     </script>
+
+    @stack('scripts')
 </body>
 
 </html>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\DataTables\SliderDataTable;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,9 +14,9 @@ class SliderController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(SliderDataTable $dataTable)
     {
-        return view('admin.slider.index');
+        return $dataTable->render('admin.slider.index');
     }
 
     /**
@@ -44,7 +45,7 @@ class SliderController extends Controller
        $slider = new Slider();
        // handle file upload
        $imagePath = $this->uploadImage($request, 'banner', 'uploads');
-       
+
        $slider->banner = $imagePath;
        $slider->type = $request->type;
        $slider->title = $request->title;
